@@ -5,12 +5,26 @@ import SkillsClient from "@/components/SkillsClient";
 
 
 export const metadata: Metadata = {
-  title: "Skills Directory",
-  description: `Browse ${externalSkills.length}+ engineering skills from Anthropic, OpenAI, Google, React, Next.js, TypeScript, Node.js, and more. Find documentation links, difficulty levels, and curated guides.`,
+  title: "MCP Server Directory — Official AI Agent Skills",
+  description: `Browse ${externalSkills.length}+ official MCP servers and AI agent skills from Anthropic, Stripe, Supabase, Cloudflare, Google, Microsoft and 35+ providers. Works with Claude, Cursor, Copilot, Gemini and any MCP-compatible AI agent.`,
+  keywords: [
+    "mcp servers", "mcp server directory", "official mcp servers", "ai agent skills",
+    "model context protocol", "claude mcp", "cursor mcp", "copilot mcp",
+    "anthropic mcp", "stripe mcp", "supabase mcp", "cloudflare mcp",
+    "ai developer tools", "mcp tools list", "mcp skills directory",
+  ],
   openGraph: {
-    title: "Skills Directory · skills.vishalvoid.com",
-    description: `${externalSkills.length}+ curated engineering skills with links to official documentation.`,
+    title: "MCP Server Directory — Official AI Agent Skills · skills.vishalvoid.com",
+    description: `${externalSkills.length}+ official MCP servers from 35+ providers. Works with Claude, Cursor, Copilot, Gemini and any MCP-compatible AI agent.`,
     url: "https://skills.vishalvoid.com/skills",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MCP Server Directory — Official AI Agent Skills",
+    description: `${externalSkills.length}+ official MCP servers from 35+ providers. Works with any MCP-compatible AI agent.`,
+  },
+  alternates: {
+    canonical: "https://skills.vishalvoid.com/skills",
   },
 };
 
@@ -27,15 +41,15 @@ export default function SkillsPage() {
           <span>directory</span>
         </div>
         <h1 className="text-2xl font-semibold text-black dark:text-white leading-tight">
-          Engineering Skills Directory
+          Official MCP Server Directory
         </h1>
         <p className="text-black/55 dark:text-white/55 text-sm leading-relaxed max-w-xl">
           A curated index of{" "}
           <span className="text-black dark:text-white font-medium">
-            {externalSkills.length}+ skills
+            {externalSkills.length}+ official MCP servers and AI agent skills
           </span>{" "}
-          from across the ecosystem — Anthropic, OpenAI, Google, React, Next.js, TypeScript, Node.js,
-          and more. Each links directly to the official documentation.
+          from Anthropic, Stripe, Supabase, Cloudflare, Google, Microsoft and 35+ providers.
+          Works with Claude, Cursor, Copilot, Gemini and any MCP-compatible agent.
         </p>
       </div>
 

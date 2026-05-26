@@ -11,5 +11,7 @@ export default function robots(): MetadataRoute.Robots {
     ],
     sitemap: "https://skills.vishalvoid.com/sitemap.xml",
     host: "https://skills.vishalvoid.com",
+    // LLM-readable index for AI crawlers
+    // https://skills.vishalvoid.com/llms.txt
   };
 }

@@ -3,7 +3,7 @@ import { externalSkills, CATEGORIES } from "@/data/external-skills";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Skills Directory — skills.vishalvoid.com";
+export const alt = "Official MCP Server Directory & AI Agent Skills — skills.vishalvoid.com";
 
 const CATEGORY_BADGE_COLORS: Record<string, { bg: string; text: string; border: string }> = {
   "Creative & Design":        { bg: "#1e0b12", text: "#f472b6", border: "#3c1020" },
@@ -51,10 +51,10 @@ export default function OGImage() {
             flexDirection: "column",
           }}
         >
-          <span>Skills Directory</span>
+          <span>MCP Server Directory</span>
         </div>
         <div style={{ color: "#666666", fontSize: "22px", display: "flex" }}>
-          {externalSkills.length}+ curated skills from across the ecosystem
+          {externalSkills.length}+ official MCP servers from 35+ providers
         </div>
 
         {/* Category badges */}

@@ -1,25 +1,26 @@
 import type { MetadataRoute } from "next";
-import { skills } from "@/data/skills";
-import { externalSkills } from "@/data/external-skills";
+import { PROVIDER_SLUGS } from "@/data/external-skills";
 
 const BASE = "https://skills.vishalvoid.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  const ownSkillPages: MetadataRoute.Sitemap = skills.map((skill) => ({
-    url: `${BASE}/${skill.slug}`,
+  const providerPages: MetadataRoute.Sitemap = PROVIDER_SLUGS.map(({ id }) => ({
+    url: `${BASE}/skills/${id}`,
     lastModified: now,
-    changeFrequency: "monthly",
+    changeFrequency: "weekly" as const,
     priority: 0.8,
   }));
 
-  const externalSkillPages: MetadataRoute.Sitemap = externalSkills.map((skill) => ({
-    url: `${BASE}/skills/anthropic/${skill.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.6,
-  }));
+  const skillPages: MetadataRoute.Sitemap = PROVIDER_SLUGS.flatMap(({ id, slugs }) =>
+    slugs.map((slug) => ({
+      url: `${BASE}/skills/${id}/${slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    }))
+  );
 
   return [
     {
@@ -34,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
-    ...ownSkillPages,
-    ...externalSkillPages,
+    ...providerPages,
+    ...skillPages,
   ];
 }

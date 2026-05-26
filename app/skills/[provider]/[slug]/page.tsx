@@ -20,13 +20,27 @@ export async function generateMetadata({
   const { slug, provider } = await params;
   const skill = getExternalSkillBySlug(slug);
   if (!skill) return {};
+  const providerName = PROVIDER_NAMES[provider] ?? provider;
   return {
-    title: `${skill.name} - ${skill.tagline}`,
-    description: skill.description,
+    title: `${skill.name} MCP Skill — ${providerName} Official Agent Skill`,
+    description: `${skill.description} Works with Claude, Cursor, Copilot, Gemini and any MCP-compatible AI agent. Official ${providerName} MCP server skill.`,
+    keywords: [
+      `${skill.name.toLowerCase()} mcp`, `${providerName.toLowerCase()} mcp`,
+      `${providerName.toLowerCase()} agent skill`, "mcp server", "ai agent skill",
+      "model context protocol", skill.category.toLowerCase(),
+    ],
     openGraph: {
-      title: `${skill.name} - ${skill.tagline} · skills.vishalvoid.com`,
-      description: skill.description,
+      title: `${skill.name} — ${providerName} Official MCP Skill · skills.vishalvoid.com`,
+      description: `${skill.description} Works with Claude, Cursor, Copilot, Gemini and any MCP-compatible AI agent.`,
       url: `https://skills.vishalvoid.com/skills/${provider}/${skill.slug}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${skill.name} — ${providerName} Official MCP Skill`,
+      description: skill.description,
+    },
+    alternates: {
+      canonical: `https://skills.vishalvoid.com/skills/${provider}/${skill.slug}`,
     },
   };
 }
