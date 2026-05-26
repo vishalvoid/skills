@@ -906,6 +906,47 @@ export async function deleteAllSessions(userId: string) {
       },
     ],
   },
+  {
+    slug: "official-skills-installer",
+    name: "Official Skills Installer",
+    category: "Patterns",
+    tagline: "Scrape, structure, and register 250+ developer skills from officialskills.sh.",
+    description: "A custom automation pattern to scrape, download, clean, and register developer skills from officialskills.sh. Automatically formats whenToUse entries using action gerunds and integrates them with Next.js static params.",
+    tags: ["Automation", "Node.js", "Scraping", "TypeScript", "Next.js"],
+    installCmd: "curl -fsSL https://skills.vishalvoid.com/install official-skills-installer | bash",
+    docs: [
+      {
+        title: "Architecture & Integration",
+        content: "To integrate over 250 skills across 35 different providers into this site, we built an automated pipeline. The pipeline first scrapes the master catalog on officialskills.sh, resolves GitHub source repositories, downloads raw markdown contents, structures them into TypeScript, rewrites the global array registry, and updates the sidebar filtering client state with matching brand SVG icons."
+      },
+      {
+        title: "Core scrap & generation script",
+        content: "This Node.js script downloads the metadata from officialskills.sh, resolves GitHub repositories, downloads the skills, and writes cleaned files to data/external/.",
+        code: `// scratch/build-all-external-skills.js
+const fs = require('fs');
+const path = require('path');
+const https = require('https');
+
+// Custom logic for cleaning whenToUse (ensuring gerund verbs, min 5 items)
+function cleanWhenToUse(items) {
+  // ensure gerund action words...
+}`,
+        language: "javascript",
+        filename: "scratch/build-all-external-skills.js"
+      },
+      {
+        title: "Dynamic sidebar registration",
+        content: "The Next.js dynamic routes use a single page layout under app/skills/anthropic/[slug] to serve all external skills by matching their slugs, while the Sidebar filter state allows users to search across category tags and provider brands.",
+        code: `// components/SkillsClient.tsx
+export default function SkillsClient({ skills }) {
+  const [provider, setProvider] = useState("All");
+  // filters all skills dynamically based on imported arrays
+}`,
+        language: "tsx",
+        filename: "components/SkillsClient.tsx"
+      }
+    ]
+  }
 ];
 
 export function getSkillBySlug(slug: string): Skill | undefined {

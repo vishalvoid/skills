@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
+import SearchBar from "@/components/SearchBar";
 
 export default function Header() {
   return (
@@ -12,10 +13,11 @@ export default function Header() {
           skills<span className="opacity-25">.</span>
           <span className="opacity-40">vishalvoid</span>
         </Link>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
+          <SearchBar />
           <Link
             href="/skills"
-            className="font-mono text-xs text-black/40 dark:text-white/35 hover:text-black/70 dark:hover:text-white/60 transition-colors"
+            className="font-mono text-xs text-black/55 dark:text-white/65 hover:text-black/85 dark:hover:text-white/90 transition-colors"
           >
             directory
           </Link>
@@ -24,7 +26,7 @@ export default function Header() {
             href="https://github.com/vishalvoid"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-black/30 dark:text-white/25 hover:text-black/70 dark:hover:text-white/60 transition-colors"
+            className="text-black/45 dark:text-white/60 hover:text-black/80 dark:hover:text-white/90 transition-colors"
             aria-label="GitHub"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

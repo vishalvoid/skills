@@ -1,0 +1,41 @@
+name: Sync Skills
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # Daily at 6am UTC
+  workflow_dispatch:        # Manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      - name: Run skill sync
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/sync-skills.js
+
+      - name: Create PR if changes detected
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "feat: sync new skills from upstream providers"
+          title: "feat: new skills detected"
+          body: |
+            Auto-synced new skills detected in [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills).
+
+            Review the changes and merge to add them to the site.
+          branch: sync/new-skills
+          delete-branch: true
+          labels: skills-sync

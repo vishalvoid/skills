@@ -33,7 +33,7 @@ printf "\\n"
 
 # ─── Config ─────────────────────────────────────────────────────────────────
 BASE_URL="\${SKILLS_BASE_URL:-${BASE_URL}}"
-SKILLS_TO_INSTALL="\${1:-${ALL_SLUGS}}"
+SKILLS_TO_INSTALL="\${1:-${slugs}}"
 
 if [ "\$SKILLS_TO_INSTALL" != "\${SKILLS_TO_INSTALL#* }" ]; then
   COMPACT=1

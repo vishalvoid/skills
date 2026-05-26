@@ -76,8 +76,8 @@ export default async function CodeBlock({
   ]);
 
   return (
-    <div className="rounded-md border border-black/10 dark:border-[#1f1f1f] overflow-hidden">
-      <div className="flex items-center justify-between px-4 py-2 bg-[#f4f4f4] dark:bg-[#0d0d0d] border-b border-black/8 dark:border-[#1f1f1f]">
+    <div className="rounded-md border border-black/10 dark:border-white/20 overflow-hidden">
+      <div className="flex items-center justify-between px-4 py-2 bg-[#f4f4f4] dark:bg-[#0d0d0d] border-b border-black/8 dark:border-white/15">
         <span className="font-mono text-[10px] text-black/35 dark:text-[#444]">
           {filename ?? language ?? "code"}
         </span>

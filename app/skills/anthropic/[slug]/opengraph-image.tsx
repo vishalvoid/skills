@@ -8,18 +8,11 @@ export function generateStaticParams() {
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-const SOURCE_BADGE_COLORS: Record<string, { bg: string; text: string; border: string }> = {
-  Anthropic:      { bg: "#1a0f09", text: "#d97757", border: "#3a1f0f" },
-  OpenAI:         { bg: "#071510", text: "#10b981", border: "#0f2e20" },
-  Google:         { bg: "#080d1a", text: "#3b82f6", border: "#0f1e3a" },
-  React:          { bg: "#081520", text: "#38bdf8", border: "#0f2540" },
-  "Next.js":      { bg: "#111111", text: "#ffffff", border: "#222222" },
-  TypeScript:     { bg: "#080d1a", text: "#93c5fd", border: "#0f1a30" },
-  "Node.js":      { bg: "#080f08", text: "#4ade80", border: "#0f200f" },
-  Databases:      { bg: "#0d0818", text: "#a78bfa", border: "#1a1030" },
-  "CSS & Design": { bg: "#180810", text: "#f472b6", border: "#2a1020" },
-  Testing:        { bg: "#181008", text: "#fbbf24", border: "#2a2010" },
-  Deployment:     { bg: "#0d1018", text: "#94a3b8", border: "#1a2030" },
+const CATEGORY_BADGE_COLORS: Record<string, { bg: string; text: string; border: string }> = {
+  "Creative & Design":        { bg: "#1e0b12", text: "#f472b6", border: "#3c1020" },
+  "Technical & Development":  { bg: "#080d1a", text: "#3b82f6", border: "#0f1e3a" },
+  "Office & Documents":       { bg: "#1e1308", text: "#fbbf24", border: "#3c2a10" },
+  "Enterprise":               { bg: "#0d0818", text: "#a78bfa", border: "#1a1030" },
 };
 
 const DIFFICULTY_COLOR: Record<string, string> = {
@@ -33,7 +26,7 @@ export default async function OGImage({ params }: { params: Promise<{ slug: stri
   const skill = getExternalSkillBySlug(slug);
   if (!skill) return new Response("not found", { status: 404 });
 
-  const badge = SOURCE_BADGE_COLORS[skill.source] ?? { bg: "#111", text: "#888", border: "#222" };
+  const badge = CATEGORY_BADGE_COLORS[skill.category] ?? { bg: "#111", text: "#888", border: "#222" };
 
   return new ImageResponse(
     <div
@@ -61,7 +54,7 @@ export default async function OGImage({ params }: { params: Promise<{ slug: stri
             display: "flex",
           }}
         >
-          {skill.source}
+          {skill.category}
         </div>
         <div
           style={{

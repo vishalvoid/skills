@@ -1,0 +1,352 @@
+[
+  {
+    "readmeOrg": "anthropics",
+    "displayName": "Anthropic",
+    "githubOrg": "anthropics",
+    "githubRepo": "skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/anthropic.ts",
+    "exportName": "anthropicSkills",
+    "importPath": "./external/anthropic"
+  },
+  {
+    "readmeOrg": "angular",
+    "displayName": "Angular",
+    "githubOrg": "angular",
+    "githubRepo": "skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/angular.ts",
+    "exportName": "angularSkills",
+    "importPath": "./external/angular"
+  },
+  {
+    "readmeOrg": "auth0",
+    "displayName": "Auth0",
+    "githubOrg": "auth0",
+    "githubRepo": "agent-skills",
+    "skillsPath": "plugins/auth0/skills",
+    "dataFile": "data/external/auth0.ts",
+    "exportName": "auth0Skills",
+    "importPath": "./external/auth0"
+  },
+  {
+    "readmeOrg": "better-auth",
+    "displayName": "Better Auth",
+    "githubOrg": "better-auth",
+    "githubRepo": "better-auth",
+    "skillsPath": "skills",
+    "dataFile": "data/external/better-auth.ts",
+    "exportName": "betterAuthSkills",
+    "importPath": "./external/better-auth"
+  },
+  {
+    "readmeOrg": "brave",
+    "displayName": "Brave",
+    "githubOrg": "brave",
+    "githubRepo": "brave-search-skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/brave.ts",
+    "exportName": "braveSkills",
+    "importPath": "./external/brave"
+  },
+  {
+    "readmeOrg": "browserbase",
+    "displayName": "Browserbase",
+    "githubOrg": "browserbase",
+    "githubRepo": "skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/browserbase.ts",
+    "exportName": "browserbaseSkills",
+    "importPath": "./external/browserbase"
+  },
+  {
+    "readmeOrg": "callstackincubator",
+    "displayName": "Callstack",
+    "githubOrg": "callstackincubator",
+    "githubRepo": "claude-skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/callstack.ts",
+    "exportName": "callstackSkills",
+    "importPath": "./external/callstack"
+  },
+  {
+    "readmeOrg": "clickhouse",
+    "displayName": "ClickHouse",
+    "githubOrg": "ClickHouse",
+    "githubRepo": "ai-skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/clickhouse.ts",
+    "exportName": "clickhouseSkills",
+    "importPath": "./external/clickhouse"
+  },
+  {
+    "readmeOrg": "cloudflare",
+    "displayName": "Cloudflare",
+    "githubOrg": "cloudflare",
+    "githubRepo": "agents-sdk",
+    "skillsPath": "skills",
+    "dataFile": "data/external/cloudflare.ts",
+    "exportName": "cloudflareSkills",
+    "importPath": "./external/cloudflare"
+  },
+  {
+    "readmeOrg": "coderabbitai",
+    "displayName": "CodeRabbit",
+    "githubOrg": "coderabbitai",
+    "githubRepo": "skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/coderabbitai.ts",
+    "exportName": "coderabbitaiSkills",
+    "importPath": "./external/coderabbitai"
+  },
+  {
+    "readmeOrg": "coinbase",
+    "displayName": "Coinbase",
+    "githubOrg": "coinbase",
+    "githubRepo": "agentkit",
+    "skillsPath": "skills",
+    "dataFile": "data/external/coinbase.ts",
+    "exportName": "coinbaseSkills",
+    "importPath": "./external/coinbase"
+  },
+  {
+    "readmeOrg": "composiohq",
+    "displayName": "Composio",
+    "githubOrg": "ComposioHQ",
+    "githubRepo": "composio",
+    "skillsPath": "skills",
+    "dataFile": "data/external/composiohq.ts",
+    "exportName": "composiohqSkills",
+    "importPath": "./external/composiohq"
+  },
+  {
+    "readmeOrg": "expo",
+    "displayName": "Expo",
+    "githubOrg": "expo",
+    "githubRepo": "expo",
+    "skillsPath": "skills",
+    "dataFile": "data/external/expo.ts",
+    "exportName": "expoSkills",
+    "importPath": "./external/expo"
+  },
+  {
+    "readmeOrg": "firecrawl",
+    "displayName": "Firecrawl",
+    "githubOrg": "mendableai",
+    "githubRepo": "firecrawl",
+    "skillsPath": "skills",
+    "dataFile": "data/external/firecrawl.ts",
+    "exportName": "firecrawlSkills",
+    "importPath": "./external/firecrawl"
+  },
+  {
+    "readmeOrg": "getsentry",
+    "displayName": "Sentry",
+    "githubOrg": "getsentry",
+    "githubRepo": "sentry-skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/getsentry.ts",
+    "exportName": "getsentrySkills",
+    "importPath": "./external/getsentry"
+  },
+  {
+    "readmeOrg": "google-gemini",
+    "displayName": "Google Gemini",
+    "githubOrg": "google-gemini",
+    "githubRepo": "skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/google-gemini.ts",
+    "exportName": "googleGeminiSkills",
+    "importPath": "./external/google-gemini"
+  },
+  {
+    "readmeOrg": "google-labs-code",
+    "displayName": "Google Labs",
+    "githubOrg": "google-labs-code",
+    "githubRepo": "skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/google-labs-code.ts",
+    "exportName": "googleLabsCodeSkills",
+    "importPath": "./external/google-labs-code"
+  },
+  {
+    "readmeOrg": "googleworkspace",
+    "displayName": "Google Workspace",
+    "githubOrg": "googleworkspace",
+    "githubRepo": "gws-cli",
+    "skillsPath": "skills",
+    "dataFile": "data/external/googleworkspace.ts",
+    "exportName": "googleWorkspaceSkills",
+    "importPath": "./external/googleworkspace"
+  },
+  {
+    "readmeOrg": "hashicorp",
+    "displayName": "HashiCorp",
+    "githubOrg": "hashicorp",
+    "githubRepo": "terraform-skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/hashicorp.ts",
+    "exportName": "hashicorpSkills",
+    "importPath": "./external/hashicorp"
+  },
+  {
+    "readmeOrg": "huggingface",
+    "displayName": "Hugging Face",
+    "githubOrg": "huggingface",
+    "githubRepo": "skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/huggingface.ts",
+    "exportName": "huggingfaceSkills",
+    "importPath": "./external/huggingface"
+  },
+  {
+    "readmeOrg": "microsoft",
+    "displayName": "Microsoft",
+    "githubOrg": "microsoft",
+    "githubRepo": "skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/microsoft.ts",
+    "exportName": "microsoftSkills",
+    "importPath": "./external/microsoft"
+  },
+  {
+    "readmeOrg": "neondatabase",
+    "displayName": "Neon",
+    "githubOrg": "neondatabase",
+    "githubRepo": "postgres-skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/neondatabase.ts",
+    "exportName": "neondatabaseSkills",
+    "importPath": "./external/neondatabase"
+  },
+  {
+    "readmeOrg": "netlify",
+    "displayName": "Netlify",
+    "githubOrg": "netlify",
+    "githubRepo": "skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/netlify.ts",
+    "exportName": "netlifySkills",
+    "importPath": "./external/netlify"
+  },
+  {
+    "readmeOrg": "remotion-dev",
+    "displayName": "Remotion",
+    "githubOrg": "remotion-dev",
+    "githubRepo": "skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/remotion-dev.ts",
+    "exportName": "remotionDevSkills",
+    "importPath": "./external/remotion-dev"
+  },
+  {
+    "readmeOrg": "replicate",
+    "displayName": "Replicate",
+    "githubOrg": "replicate",
+    "githubRepo": "skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/replicate.ts",
+    "exportName": "replicateSkills",
+    "importPath": "./external/replicate"
+  },
+  {
+    "readmeOrg": "sanity-io",
+    "displayName": "Sanity",
+    "githubOrg": "sanity-io",
+    "githubRepo": "skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/sanity-io.ts",
+    "exportName": "sanityIoSkills",
+    "importPath": "./external/sanity-io"
+  },
+  {
+    "readmeOrg": "stripe",
+    "displayName": "Stripe",
+    "githubOrg": "stripe",
+    "githubRepo": "ai",
+    "skillsPath": "skills",
+    "dataFile": "data/external/stripe.ts",
+    "exportName": "stripeSkills",
+    "importPath": "./external/stripe"
+  },
+  {
+    "readmeOrg": "supabase",
+    "displayName": "Supabase",
+    "githubOrg": "supabase",
+    "githubRepo": "skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/supabase.ts",
+    "exportName": "supabaseSkills",
+    "importPath": "./external/supabase"
+  },
+  {
+    "readmeOrg": "tinybirdco",
+    "displayName": "Tinybird",
+    "githubOrg": "tinybirdco",
+    "githubRepo": "skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/tinybirdco.ts",
+    "exportName": "tinybirdcoSkills",
+    "importPath": "./external/tinybirdco"
+  },
+  {
+    "readmeOrg": "trailofbits",
+    "displayName": "Trail of Bits",
+    "githubOrg": "trailofbits",
+    "githubRepo": "skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/trailofbits.ts",
+    "exportName": "trailofbitsSkills",
+    "importPath": "./external/trailofbits"
+  },
+  {
+    "readmeOrg": "trycourier",
+    "displayName": "Courier",
+    "githubOrg": "trycourier",
+    "githubRepo": "courier-skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/trycourier.ts",
+    "exportName": "trycourierSkills",
+    "importPath": "./external/trycourier"
+  },
+  {
+    "readmeOrg": "typefully",
+    "displayName": "Typefully",
+    "githubOrg": "typefully",
+    "githubRepo": "skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/typefully.ts",
+    "exportName": "typefullySkills",
+    "importPath": "./external/typefully"
+  },
+  {
+    "readmeOrg": "veniceai",
+    "displayName": "Venice AI",
+    "githubOrg": "veniceai",
+    "githubRepo": "skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/veniceai.ts",
+    "exportName": "veniceaiSkills",
+    "importPath": "./external/veniceai"
+  },
+  {
+    "readmeOrg": "vercel-labs",
+    "displayName": "Vercel",
+    "githubOrg": "vercel-labs",
+    "githubRepo": "skills",
+    "skillsPath": "skills",
+    "dataFile": "data/external/vercel-labs.ts",
+    "exportName": "vercelLabsSkills",
+    "importPath": "./external/vercel-labs"
+  },
+  {
+    "readmeOrg": "voltagent",
+    "displayName": "VoltAgent",
+    "githubOrg": "VoltAgent",
+    "githubRepo": "voltagent",
+    "skillsPath": "skills",
+    "dataFile": "data/external/voltagent.ts",
+    "exportName": "voltagentSkills",
+    "importPath": "./external/voltagent"
+  }
+]

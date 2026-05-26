@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const externalSkillPages: MetadataRoute.Sitemap = externalSkills.map((skill) => ({
-    url: `${BASE}/skills/${skill.slug}`,
+    url: `${BASE}/skills/anthropic/${skill.slug}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.6,

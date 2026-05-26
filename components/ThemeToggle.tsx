@@ -7,6 +7,7 @@ export default function ThemeToggle() {
 
   useEffect(() => {
     // Read the class already applied by the anti-flash inline script
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsDark(document.documentElement.classList.contains("dark"));
   }, []);
 
@@ -20,7 +21,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggle}
-      className="text-black/40 dark:text-[#555] hover:text-black dark:hover:text-[#aaa] transition-colors cursor-pointer"
+      className="text-black/45 dark:text-white/60 hover:text-black/80 dark:hover:text-white/90 transition-colors cursor-pointer"
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
       {isDark ? (
