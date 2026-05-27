@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SkillsClient from "@/components/SkillsClient";
 import AITerminal from "@/components/AITerminal";
+import VisitorCount from "@/components/VisitorCount";
 import { externalSkills, PROVIDER_SLUGS, PROVIDER_NAMES, CATEGORIES } from "@/data/external-skills";
 
 const FEATURED_PROVIDERS = [
@@ -50,16 +51,15 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              {/* Minimal stats list */}
+              {/* Stats list */}
               <div className="hero-item flex flex-col" style={{ animationDelay: "120ms" }}>
                 {[
                   { label: "Official Skills", value: String(externalSkills.length) },
                   { label: "Dev Teams",       value: String(providerCount) },
-                  { label: "Categories",      value: String(CATEGORIES.length) },
                   { label: "Last Updated",    value: lastUpdated },
-                ].map(({ label, value }, i) => (
+                ].map(({ label, value }) => (
                   <div key={label}
-                    className={`flex items-center justify-between py-3 ${i < 3 ? "border-b border-black/6 dark:border-white/6" : ""}`}>
+                    className="flex items-center justify-between py-3 border-b border-black/6 dark:border-white/6">
                     <span className="font-mono text-[11px] tracking-widest uppercase text-black/30 dark:text-white/25">
                       {label}
                     </span>
@@ -68,12 +68,17 @@ export default function HomePage() {
                     </span>
                   </div>
                 ))}
+                <VisitorCount />
               </div>
             </div>
 
-            {/* Right — AI summit terminal */}
-            <div className="h-[400px] lg:h-[440px]">
-              <AITerminal />
+            {/* Right — AI summit terminal (stats appear in credits) */}
+            <div className="h-[440px] lg:h-[500px]">
+              <AITerminal
+                skillCount={externalSkills.length}
+                providerCount={providerCount}
+                categoryCount={CATEGORIES.length}
+              />
             </div>
           </div>
         </section>
