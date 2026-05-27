@@ -7,6 +7,9 @@ import InstallCommand from "@/components/InstallCommand";
 import CodeBlock from "@/components/CodeBlock";
 import { skills, getSkillBySlug, getRelatedSkills } from "@/data/skills";
 
+export const dynamicParams = false;
+export const revalidate = false;
+
 export function generateStaticParams() {
   return skills.map((skill) => ({ skill: skill.slug }));
 }

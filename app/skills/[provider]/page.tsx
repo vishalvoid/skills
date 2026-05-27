@@ -9,6 +9,9 @@ import {
   getSkillsByProvider,
 } from "@/data/external-skills";
 
+export const dynamicParams = false;
+export const revalidate = false;
+
 export function generateStaticParams() {
   return PROVIDER_SLUGS.map(({ id }) => ({ provider: id }));
 }

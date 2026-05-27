@@ -6,6 +6,9 @@ import CodeBlock from "@/components/CodeBlock";
 import { marked } from "marked";
 import MarkdownViewer from "@/components/MarkdownViewer";
 
+export const dynamicParams = false;
+export const revalidate = false;
+
 export function generateStaticParams() {
   return PROVIDER_SLUGS.flatMap(({ id, slugs }) =>
     slugs.map((slug) => ({ provider: id, slug }))

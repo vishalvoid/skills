@@ -1,6 +1,9 @@
 import { ImageResponse } from "next/og";
 import { skills, getSkillBySlug } from "@/data/skills";
 
+export const dynamicParams = false;
+export const revalidate = false;
+
 export function generateStaticParams() {
   return skills.map((s) => ({ skill: s.slug }));
 }

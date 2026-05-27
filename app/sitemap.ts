@@ -3,6 +3,8 @@ import { PROVIDER_SLUGS } from "@/data/external-skills";
 
 const BASE = "https://skills.vishalvoid.com";
 
+export const revalidate = 86400;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 

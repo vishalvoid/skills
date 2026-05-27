@@ -1,6 +1,9 @@
 import { ImageResponse } from "next/og";
 import { getExternalSkillBySlug, PROVIDER_SLUGS } from "@/data/external-skills";
 
+export const dynamicParams = false;
+export const revalidate = false;
+
 export function generateStaticParams() {
   return PROVIDER_SLUGS.flatMap(({ id, slugs }) =>
     slugs.map((slug) => ({ provider: id, slug }))
