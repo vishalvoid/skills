@@ -33,6 +33,22 @@ import { huggingfaceSkills } from "./external/huggingface";
 import { trailofbitsSkills } from "./external/trailofbits";
 import { getsentrySkills } from "./external/getsentry";
 import { microsoftSkills } from "./external/microsoft";
+import { minimaxAiSkills } from "./external/minimax-ai";
+import { wordpressSkills } from "./external/wordpress";
+import { addyosmaniSkills } from "./external/addyosmani";
+import { apollographqlSkills } from "./external/apollographql";
+import { binanceSkills } from "./external/binance";
+import { datadogLabsSkills } from "./external/datadog-labs";
+import { duckdbSkills } from "./external/duckdb";
+import { falAiCommunitySkills } from "./external/fal-ai-community";
+import { figmaSkills } from "./external/figma";
+import { firebaseSkills } from "./external/firebase";
+import { flutterSkills } from "./external/flutter";
+import { garrytanSkills } from "./external/garrytan";
+import { greensockSkills } from "./external/greensock";
+import { makenotionSkills } from "./external/makenotion";
+import { mongodbSkills } from "./external/mongodb";
+import { openaiSkills } from "./external/openai";
 
 export type CategoryKey =
   | "Creative & Design"
@@ -89,7 +105,23 @@ export const externalSkills: ExternalSkill[] = [
   ...huggingfaceSkills,
   ...trailofbitsSkills,
   ...getsentrySkills,
-  ...microsoftSkills
+  ...microsoftSkills,
+  ...minimaxAiSkills,
+  ...wordpressSkills,
+  ...addyosmaniSkills,
+  ...apollographqlSkills,
+  ...binanceSkills,
+  ...datadogLabsSkills,
+  ...duckdbSkills,
+  ...falAiCommunitySkills,
+  ...figmaSkills,
+  ...firebaseSkills,
+  ...flutterSkills,
+  ...garrytanSkills,
+  ...greensockSkills,
+  ...makenotionSkills,
+  ...mongodbSkills,
+  ...openaiSkills
 ];
 
 export const CATEGORIES: CategoryKey[] = [
@@ -160,6 +192,22 @@ export const PROVIDER_NAMES: Record<string, string> = {
   veniceai: "Venice AI",
   "vercel-labs": "Vercel",
   voltagent: "VoltAgent",
+  "minimax-ai": "MiniMax AI",
+  wordpress: "WordPress",
+  addyosmani: "Addy Osmani",
+  apollographql: "Apollo GraphQL",
+  binance: "Binance",
+  "datadog-labs": "Datadog Labs",
+  duckdb: "DuckDB",
+  "fal-ai-community": "fal.ai",
+  figma: "Figma",
+  firebase: "Firebase",
+  flutter: "Flutter",
+  garrytan: "Garry Tan",
+  greensock: "GSAP / GreenSock",
+  makenotion: "Notion",
+  mongodb: "MongoDB",
+  openai: "OpenAI",
 };
 
 export const PROVIDER_SLUGS: { id: string; slugs: string[] }[] = [
@@ -198,4 +246,20 @@ export const PROVIDER_SLUGS: { id: string; slugs: string[] }[] = [
   { id: "veniceai", slugs: veniceaiSkills.map((s) => s.slug) },
   { id: "vercel-labs", slugs: vercelLabsSkills.map((s) => s.slug) },
   { id: "voltagent", slugs: voltagentSkills.map((s) => s.slug) },
+  { id: "minimax-ai", slugs: minimaxAiSkills.map((s) => s.slug) },
+  { id: "wordpress", slugs: wordpressSkills.map((s) => s.slug) },
+  { id: "addyosmani", slugs: addyosmaniSkills.map((s) => s.slug) },
+  { id: "apollographql", slugs: apollographqlSkills.map((s) => s.slug) },
+  { id: "binance", slugs: binanceSkills.map((s) => s.slug) },
+  { id: "datadog-labs", slugs: datadogLabsSkills.map((s) => s.slug) },
+  { id: "duckdb", slugs: duckdbSkills.map((s) => s.slug) },
+  { id: "fal-ai-community", slugs: falAiCommunitySkills.map((s) => s.slug) },
+  { id: "figma", slugs: figmaSkills.map((s) => s.slug) },
+  { id: "firebase", slugs: firebaseSkills.map((s) => s.slug) },
+  { id: "flutter", slugs: flutterSkills.map((s) => s.slug) },
+  { id: "garrytan", slugs: garrytanSkills.map((s) => s.slug) },
+  { id: "greensock", slugs: greensockSkills.map((s) => s.slug) },
+  { id: "makenotion", slugs: makenotionSkills.map((s) => s.slug) },
+  { id: "mongodb", slugs: mongodbSkills.map((s) => s.slug) },
+  { id: "openai", slugs: openaiSkills.map((s) => s.slug) },
 ];

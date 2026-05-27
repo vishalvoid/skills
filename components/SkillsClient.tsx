@@ -41,6 +41,22 @@ import { typefullySkills } from "@/data/external/typefully";
 import { veniceaiSkills } from "@/data/external/veniceai";
 import { vercelLabsSkills } from "@/data/external/vercel-labs";
 import { voltagentSkills } from "@/data/external/voltagent";
+import { minimaxAiSkills } from "@/data/external/minimax-ai";
+import { wordpressSkills } from "@/data/external/wordpress";
+import { addyosmaniSkills } from "@/data/external/addyosmani";
+import { apollographqlSkills } from "@/data/external/apollographql";
+import { binanceSkills } from "@/data/external/binance";
+import { datadogLabsSkills } from "@/data/external/datadog-labs";
+import { duckdbSkills } from "@/data/external/duckdb";
+import { falAiCommunitySkills } from "@/data/external/fal-ai-community";
+import { figmaSkills } from "@/data/external/figma";
+import { firebaseSkills } from "@/data/external/firebase";
+import { flutterSkills } from "@/data/external/flutter";
+import { garrytanSkills } from "@/data/external/garrytan";
+import { greensockSkills } from "@/data/external/greensock";
+import { makenotionSkills } from "@/data/external/makenotion";
+import { mongodbSkills } from "@/data/external/mongodb";
+import { openaiSkills } from "@/data/external/openai";
 
 interface ProviderItem {
   id: string;
@@ -57,11 +73,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: angularSkills,
     repoPath: "angular/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <path d="M12 2L2 5.5l1.5 12.5L12 22l8.5-4L22 5.5L12 2z" fill="#DD0031" />
-        <path d="M12 2v20l8.5-4L22 5.5L12 2z" fill="#C3002F" />
-        <path d="M12 4.5l-6 11.5h2.5l1.2-3h4.6l1.2 3h2.5L12 4.5zm-1.1 6L12 7.7l1.1 2.8h-2.2z" fill="#FFFFFF" />
-      </svg>
+      <img src="https://github.com/angular.png?size=32" alt="Angular" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -70,9 +82,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: anthropicSkills,
     repoPath: "anthropic/skills",
     icon: (
-      <svg viewBox="0 0 58 58" className="w-4 h-4 shrink-0" fill="#CCBFB5">
-        <path d="M20.93 34.56l7.58-19.53 7.58 19.53H20.93z M22.16.97L0 56.56h12.39l4.53-11.67h23.18l4.53 11.67h12.39L34.87.97H22.16z" />
-      </svg>
+      <img src="https://github.com/anthropics.png?size=32" alt="Anthropic" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -81,10 +91,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: auth0Skills,
     repoPath: "auth0/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <path d="M12 2C9.5 3.5 6.5 4.5 3.5 5c0 6.5 3 13 8.5 17 5.5-4 8.5-10.5 8.5-17-3-.5-6-1.5-8.5-3z" fill="#EB5424" />
-        <path d="M12 6.5c1.38 0 2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5-2.5-1.12-2.5-2.5 1.12-2.5 2.5-2.5zM12 18.5c-2.5 0-4.5-2-4.5-4.5 0-1.5 1-3 2.5-4 .5 1.5 1 2.5 2 2.5s1.5-1 2-2.5c1.5 1 2.5 2.5 2.5 4 0 2.5-2 4.5-4.5 4.5z" fill="#FFFFFF" />
-      </svg>
+      <img src="https://github.com/auth0.png?size=32" alt="Auth0" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -93,9 +100,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: betterAuthSkills,
     repoPath: "better-auth/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none" stroke="#F59E0B" strokeWidth="2.5">
-        <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3M15.5 7.5L14 9" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
+      <img src="https://github.com/better-auth.png?size=32" alt="Better Auth" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -104,10 +109,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: braveSkills,
     repoPath: "brave/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <path d="M12 2c-.12 0-.25.02-.36.07L4 5.4C2.8 5.92 2 7.12 2 8.44c0 3.76 2.05 7.71 5.9 10.79l3.53 2.56c.35.25.81.25 1.16 0l3.53-2.56c3.85-3.08 5.9-7.03 5.9-10.79 0-1.32-.8-2.52-2-3.04l-7.64-3.33c-.11-.05-.24-.07-.36-.07z" fill="#FB542B" />
-        <path d="M12 6.5l3.5 4.5H8.5L12 6.5zM12 18.5l-4-4h8l-4 4z" fill="#FFFFFF" opacity="0.9" />
-      </svg>
+      <img src="https://github.com/brave.png?size=32" alt="Brave" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -116,11 +118,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: browserbaseSkills,
     repoPath: "browserbase/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none" stroke="#FF5C00" strokeWidth="2.5">
-        <rect x="3" y="3" width="18" height="18" rx="2" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M3 9h18" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M9 21V9" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
+      <img src="https://github.com/browserbase.png?size=32" alt="Browserbase" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -129,10 +127,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: callstackSkills,
     repoPath: "callstack/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <path d="M12 2L2 7l10 5 10-5-10-5z" fill="#E1382A" />
-        <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="#E1382A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
+      <img src="https://github.com/callstack.png?size=32" alt="Callstack" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -141,11 +136,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: clickhouseSkills,
     repoPath: "clickhouse/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <rect x="3" y="4" width="4" height="16" fill="#FCD017" rx="1" />
-        <rect x="10" y="4" width="4" height="16" fill="#FF6000" rx="1" />
-        <rect x="17" y="4" width="4" height="16" fill="#FF6000" rx="1" />
-      </svg>
+      <img src="https://github.com/ClickHouse.png?size=32" alt="ClickHouse" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -154,9 +145,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: cloudflareSkills,
     repoPath: "cloudflare/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <path d="M17.5 19H9a5 5 0 0 1-5-5 5 5 0 0 1 4.5-4.9c.7-3.4 3.7-6.1 7.5-6.1 4.3 0 7.8 3.2 8 7.4A4.5 4.5 0 0 1 17.5 19z" fill="#F38020" />
-      </svg>
+      <img src="https://github.com/cloudflare.png?size=32" alt="Cloudflare" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -165,9 +154,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: coderabbitaiSkills,
     repoPath: "coderabbitai/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="#00A36C">
-        <path d="M12 2a4 4 0 0 1 4 4v3.2A8 8 0 1 1 8 9.2V6a4 4 0 0 1 4-4zm-2.5 12a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-      </svg>
+      <img src="https://github.com/coderabbitai.png?size=32" alt="CodeRabbit" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -176,10 +163,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: coinbaseSkills,
     repoPath: "coinbase/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <circle cx="12" cy="12" r="10" fill="#0052FF" />
-        <path d="M12 6a6 6 0 0 0-6 6 6 6 0 0 0 6 6h2v-2h-2a4 4 0 0 1-4-4 4 4 0 0 1 4-4h2V6h-2z" fill="#FFFFFF" />
-      </svg>
+      <img src="https://github.com/coinbase.png?size=32" alt="Coinbase" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -188,10 +172,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: composiohqSkills,
     repoPath: "composiohq/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" fill="#10B981" />
-        <path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
+      <img src="https://github.com/composiohq.png?size=32" alt="Composio" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -200,10 +181,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: expoSkills,
     repoPath: "expo/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <rect width="24" height="24" rx="5" fill="#000020" />
-        <path d="M12 4L4 18h16L12 4zm0 3.5l5.5 9.5h-11L12 7.5z" fill="#FFFFFF" />
-      </svg>
+      <img src="https://github.com/expo.png?size=32" alt="Expo" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -212,10 +190,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: firecrawlSkills,
     repoPath: "firecrawl/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <path d="M12 2C9.5 6 6 8.5 6 13.5a6 6 0 1 0 12 0C18 8.5 14.5 6 12 2z" fill="#FF4500" />
-        <path d="M12 8c-1.5 2-3 3-3 5.5a3 3 0 1 0 6 0C15 11 13.5 10 12 8z" fill="#FFCC00" />
-      </svg>
+      <img src="https://github.com/firecrawl.png?size=32" alt="Firecrawl" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -224,11 +199,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: getsentrySkills,
     repoPath: "getsentry/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <circle cx="12" cy="12" r="9" stroke="#E1567C" strokeWidth="2.5" />
-        <circle cx="12" cy="12" r="4" fill="#362D59" />
-        <path d="M12 3v4M12 17v4M3 12h4M17 12h4" stroke="#E1567C" strokeWidth="2" />
-      </svg>
+      <img src="https://github.com/getsentry.png?size=32" alt="Sentry" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -255,10 +226,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: googleLabsCodeSkills,
     repoPath: "google-labs-code/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <path d="M6 3h12M9 3v6L4.2 18.6C3.7 19.5 4.3 21 5.4 21h13.2c1.1 0 1.7-1.5 1.2-2.4L15 9V3M6 14h12" stroke="#8AB4F8" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M6 15h12v4.5A1.5 1.5 0 0 1 16.5 21h-9A1.5 1.5 0 0 1 6 19.5V15z" fill="#C58AF9" opacity="0.8" />
-      </svg>
+      <img src="https://github.com/google.png?size=32" alt="Google Labs" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -267,12 +235,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: googleWorkspaceSkills,
     repoPath: "googleworkspace/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <rect x="3" y="3" width="7" height="7" fill="#4285F4" rx="1.5" />
-        <rect x="14" y="3" width="7" height="7" fill="#EA4335" rx="1.5" />
-        <rect x="14" y="14" width="7" height="7" fill="#FBBC05" rx="1.5" />
-        <rect x="3" y="14" width="7" height="7" fill="#34A853" rx="1.5" />
-      </svg>
+      <img src="https://github.com/google.png?size=32" alt="Google Workspace" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -281,9 +244,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: hashicorpSkills,
     repoPath: "hashicorp/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <path d="M12 2L2 7l10 5 10-5-10-5zm0 10v10M2 17l10 5 10-5" stroke="#6029E4" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
+      <img src="https://github.com/hashicorp.png?size=32" alt="HashiCorp" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -292,12 +253,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: huggingfaceSkills,
     repoPath: "huggingface/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <circle cx="12" cy="12" r="10" fill="#FFD15C" />
-        <circle cx="8.5" cy="10" r="1.5" fill="#000000" />
-        <circle cx="15.5" cy="10" r="1.5" fill="#000000" />
-        <path d="M8 15s1.5 2 4 2 4-2 4-2" stroke="#000000" strokeWidth="1.5" strokeLinecap="round" />
-      </svg>
+      <img src="https://github.com/huggingface.png?size=32" alt="Hugging Face" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -306,12 +262,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: microsoftSkills,
     repoPath: "microsoft/skills",
     icon: (
-      <svg viewBox="0 0 23 23" className="w-4 h-4 shrink-0" fill="none">
-        <rect x="0" y="0" width="10" height="10" fill="#F25022" />
-        <rect x="13" y="0" width="10" height="10" fill="#7FBA00" />
-        <rect x="0" y="13" width="10" height="10" fill="#00A4EF" />
-        <rect x="13" y="13" width="10" height="10" fill="#FFB900" />
-      </svg>
+      <img src="https://github.com/microsoft.png?size=32" alt="Microsoft" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -320,9 +271,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: neondatabaseSkills,
     repoPath: "neondatabase/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="#00E599" />
-      </svg>
+      <img src="https://github.com/neondatabase.png?size=32" alt="Neon" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -331,10 +280,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: netlifySkills,
     repoPath: "netlify/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <path d="M12 2L2 12l10 10 10-10L12 2z" fill="#00AD9F" />
-        <path d="M12 6v12M6 12h12" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
-      </svg>
+      <img src="https://github.com/netlify.png?size=32" alt="Netlify" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -343,16 +289,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: remotionDevSkills,
     repoPath: "remotion-dev/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <defs>
-          <linearGradient id="remotion-grad-sidebar" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#00D8FF" />
-            <stop offset="100%" stopColor="#0077FF" />
-          </linearGradient>
-        </defs>
-        <circle cx="12" cy="12" r="10" fill="url(#remotion-grad-sidebar)" />
-        <path d="M10 8.5l6 3.5-6 3.5v-7z" fill="#FFFFFF" />
-      </svg>
+      <img src="https://github.com/remotion.png?size=32" alt="Remotion" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -361,10 +298,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: replicateSkills,
     repoPath: "replicate/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <rect x="3" y="3" width="18" height="18" rx="2" fill="#000000" />
-        <path d="M9 3v18M15 3v18M3 9h18M3 15h18" stroke="#333333" strokeWidth="1" />
-      </svg>
+      <img src="https://github.com/replicate.png?size=32" alt="Replicate" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -373,10 +307,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: sanityIoSkills,
     repoPath: "sanity-io/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <circle cx="12" cy="12" r="9" stroke="#F03E2F" strokeWidth="3" />
-        <circle cx="12" cy="12" r="4" fill="#F03E2F" />
-      </svg>
+      <img src="https://github.com/sanity-io.png?size=32" alt="Sanity" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -385,10 +316,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: stripeSkills,
     repoPath: "stripe/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <rect width="24" height="24" rx="5" fill="#635BFF" />
-        <path d="M13.5 8.5c-.8 0-1.2.4-1.2.9 0 1 .8 1.2 2.2 1.6 1.4.4 2.5 1 2.5 2.5 0 2.2-1.8 3-3.8 3-2 0-3.8-.8-3.8-2.5h2.2c0 1 .6 1.1 1.6 1.1 1 0 1.4-.4 1.4-1 0-.9-.6-1.2-2-1.6-1.4-.4-2.7-1-2.7-2.6 0-2 1.8-2.8 3.6-2.8 1.8 0 3.2.8 3.2 2.4H14.7c0-.9-.5-1-1.2-1z" fill="#FFFFFF" />
-      </svg>
+      <img src="https://github.com/stripe.png?size=32" alt="Stripe" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -397,9 +325,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: supabaseSkills,
     repoPath: "supabase/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <path d="M19 11h-6.24l4.08-8.16a1 1 0 0 0-1.57-1.23l-11 11a1 1 0 0 0 .71 1.71h6.24l-4.08 8.16a1 1 0 0 0 1.57 1.23l11-11a1 1 0 0 0-.71-1.71z" fill="#3ECF8E" />
-      </svg>
+      <img src="https://github.com/supabase.png?size=32" alt="Supabase" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -408,9 +334,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: tinybirdcoSkills,
     repoPath: "tinybirdco/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 10h3l-4 4-4-4h3V8h2v4z" fill="#00D084" />
-      </svg>
+      <img src="https://github.com/tinybirdco.png?size=32" alt="Tinybird" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -419,10 +343,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: trailofbitsSkills,
     repoPath: "trailofbits/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="#D62728" />
-        <path d="M12 6v10M8 10h8" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
-      </svg>
+      <img src="https://github.com/trailofbits.png?size=32" alt="Trail of Bits" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -431,9 +352,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: trycourierSkills,
     repoPath: "trycourier/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" fill="#FF5E5B" />
-      </svg>
+      <img src="https://github.com/trycourier.png?size=32" alt="Courier" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -442,9 +361,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: typefullySkills,
     repoPath: "typefully/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" fill="#1DA1F2" />
-      </svg>
+      <img src="https://github.com/typefully.png?size=32" alt="Typefully" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -453,10 +370,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: veniceaiSkills,
     repoPath: "veniceai/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" fill="#F59E0B" opacity="0.2" />
-        <path d="M8 10a4 4 0 0 0 8 0" stroke="#F59E0B" strokeWidth="2.5" strokeLinecap="round" />
-      </svg>
+      <img src="https://github.com/veniceai.png?size=32" alt="Venice AI" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -465,9 +379,7 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: vercelLabsSkills,
     repoPath: "vercel-labs/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="currentColor">
-        <path d="M24 22.5L12 1.5L0 22.5H24Z" />
-      </svg>
+      <img src="https://github.com/vercel.png?size=32" alt="Vercel" className="w-4 h-4 rounded-full shrink-0" />
     )
   },
   {
@@ -476,9 +388,151 @@ const PROVIDER_LIST: ProviderItem[] = [
     skills: voltagentSkills,
     repoPath: "voltagent/skills",
     icon: (
-      <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0" fill="none">
-        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="#FBBF24" />
-      </svg>
+      <img src="https://github.com/voltagent.png?size=32" alt="VoltAgent" className="w-4 h-4 rounded-full shrink-0" />
+    )
+  },
+  {
+    id: "minimax-ai",
+    name: "MiniMax AI",
+    skills: minimaxAiSkills,
+    repoPath: "MiniMax-AI/skills",
+    icon: (
+      <img src="https://github.com/MiniMax-AI.png?size=32" alt="MiniMax AI" className="w-4 h-4 rounded-full shrink-0" />
+    )
+  },
+  {
+    id: "wordpress",
+    name: "WordPress",
+    skills: wordpressSkills,
+    repoPath: "WordPress/agent-skills",
+    icon: (
+      <img src="https://github.com/WordPress.png?size=32" alt="WordPress" className="w-4 h-4 rounded-full shrink-0" />
+    )
+  },
+  {
+    id: "addyosmani",
+    name: "Addy Osmani",
+    skills: addyosmaniSkills,
+    repoPath: "addyosmani/web-quality-skills",
+    icon: (
+      <img src="https://github.com/addyosmani.png?size=32" alt="Addy Osmani" className="w-4 h-4 rounded-full shrink-0" />
+    )
+  },
+  {
+    id: "apollographql",
+    name: "Apollo GraphQL",
+    skills: apollographqlSkills,
+    repoPath: "apollographql/skills",
+    icon: (
+      <img src="https://github.com/apollographql.png?size=32" alt="Apollo GraphQL" className="w-4 h-4 rounded-full shrink-0" />
+    )
+  },
+  {
+    id: "binance",
+    name: "Binance",
+    skills: binanceSkills,
+    repoPath: "binance/binance-skills-hub",
+    icon: (
+      <img src="https://github.com/binance.png?size=32" alt="Binance" className="w-4 h-4 rounded-full shrink-0" />
+    )
+  },
+  {
+    id: "datadog-labs",
+    name: "Datadog Labs",
+    skills: datadogLabsSkills,
+    repoPath: "datadog-labs/agent-skills",
+    icon: (
+      <img src="https://github.com/datadog.png?size=32" alt="Datadog Labs" className="w-4 h-4 rounded-full shrink-0" />
+    )
+  },
+  {
+    id: "duckdb",
+    name: "DuckDB",
+    skills: duckdbSkills,
+    repoPath: "duckdb/duckdb-skills",
+    icon: (
+      <img src="https://github.com/duckdb.png?size=32" alt="DuckDB" className="w-4 h-4 rounded-full shrink-0" />
+    )
+  },
+  {
+    id: "fal-ai-community",
+    name: "fal.ai",
+    skills: falAiCommunitySkills,
+    repoPath: "fal-ai-community/skills",
+    icon: (
+      <img src="https://github.com/fal-ai.png?size=32" alt="fal.ai" className="w-4 h-4 rounded-full shrink-0" />
+    )
+  },
+  {
+    id: "figma",
+    name: "Figma",
+    skills: figmaSkills,
+    repoPath: "figma/mcp-server-guide",
+    icon: (
+      <img src="https://github.com/figma.png?size=32" alt="Figma" className="w-4 h-4 rounded-full shrink-0" />
+    )
+  },
+  {
+    id: "firebase",
+    name: "Firebase",
+    skills: firebaseSkills,
+    repoPath: "firebase/agent-skills",
+    icon: (
+      <img src="https://github.com/firebase.png?size=32" alt="Firebase" className="w-4 h-4 rounded-full shrink-0" />
+    )
+  },
+  {
+    id: "flutter",
+    name: "Flutter",
+    skills: flutterSkills,
+    repoPath: "flutter/skills",
+    icon: (
+      <img src="https://github.com/flutter.png?size=32" alt="Flutter" className="w-4 h-4 rounded-full shrink-0" />
+    )
+  },
+  {
+    id: "garrytan",
+    name: "Garry Tan",
+    skills: garrytanSkills,
+    repoPath: "garrytan/gstack",
+    icon: (
+      <img src="https://github.com/garrytan.png?size=32" alt="Garry Tan" className="w-4 h-4 rounded-full shrink-0" />
+    )
+  },
+  {
+    id: "greensock",
+    name: "GSAP / GreenSock",
+    skills: greensockSkills,
+    repoPath: "greensock/gsap-skills",
+    icon: (
+      <img src="https://github.com/greensock.png?size=32" alt="GSAP / GreenSock" className="w-4 h-4 rounded-full shrink-0" />
+    )
+  },
+  {
+    id: "makenotion",
+    name: "Notion",
+    skills: makenotionSkills,
+    repoPath: "makenotion/notion-cookbook",
+    icon: (
+      <img src="https://github.com/makenotion.png?size=32" alt="Notion" className="w-4 h-4 rounded-full shrink-0" />
+    )
+  },
+  {
+    id: "mongodb",
+    name: "MongoDB",
+    skills: mongodbSkills,
+    repoPath: "mongodb/agent-skills",
+    icon: (
+      <img src="https://github.com/mongodb.png?size=32" alt="MongoDB" className="w-4 h-4 rounded-full shrink-0" />
+    )
+  },
+  {
+    id: "openai",
+    name: "OpenAI",
+    skills: openaiSkills,
+    repoPath: "openai/skills",
+    icon: (
+      <img src="https://github.com/openai.png?size=32" alt="OpenAI" className="w-4 h-4 rounded-full shrink-0" />
     )
   }
 ];
@@ -512,6 +566,39 @@ export default function SkillsClient() {
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState("all");
   const [isExpanded, setIsExpanded] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  const selectProvider = (id: string) => {
+    setSelectedId(id);
+    setSelectedCategory("all");
+  };
+
+  const categoryCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+
+    if (selectedId === "all" || selectedId === "vishalvoid") {
+      for (const skill of mySkills) {
+        const cat = skill.category ?? "Other";
+        counts[cat] = (counts[cat] ?? 0) + 1;
+      }
+    }
+
+    if (selectedId !== "vishalvoid") {
+      const pool = selectedId === "all" ? PROVIDER_LIST : PROVIDER_LIST.filter((p) => p.id === selectedId);
+      for (const p of pool) {
+        for (const skill of p.skills) {
+          const cat = skill.category ?? "Other";
+          counts[cat] = (counts[cat] ?? 0) + 1;
+        }
+      }
+    }
+
+    return counts;
+  }, [selectedId]);
+
+  const availableCategories = useMemo(() => {
+    return Object.keys(categoryCounts).sort();
+  }, [categoryCounts]);
 
   const displayedProviders = isExpanded ? PROVIDER_LIST : PROVIDER_LIST.slice(0, 11);
   const remainingCount = PROVIDER_LIST.length - 11;
@@ -523,6 +610,9 @@ export default function SkillsClient() {
     // Personal skills always first
     if (selectedId === "all" || selectedId === "vishalvoid") {
       for (const skill of mySkills) {
+        if (selectedCategory !== "all" && skill.category !== selectedCategory) {
+          continue;
+        }
         if (!q || matchesPersonal(skill, q)) {
           results.push({ kind: "personal", skill, href: `/${skill.slug}`, repoPath: "vishalvoid" });
         }
@@ -534,6 +624,9 @@ export default function SkillsClient() {
       const pool = selectedId === "all" ? PROVIDER_LIST : PROVIDER_LIST.filter((p) => p.id === selectedId);
       for (const p of pool) {
         for (const skill of p.skills) {
+          if (selectedCategory !== "all" && skill.category !== selectedCategory) {
+            continue;
+          }
           if (!q || matchesQuery(skill, q)) {
             results.push({ kind: "external", skill, repoPath: p.repoPath, href: `/skills/${p.id}/${skill.slug}` });
           }
@@ -542,7 +635,7 @@ export default function SkillsClient() {
     }
 
     return results;
-  }, [selectedId, query]);
+  }, [selectedId, query, selectedCategory]);
 
   const activeProviderName =
     selectedId === "all" ? "All Providers" :
@@ -560,7 +653,7 @@ export default function SkillsClient() {
           <div className="flex flex-col gap-1.5">
             {/* All Providers */}
             <button
-              onClick={() => setSelectedId("all")}
+              onClick={() => selectProvider("all")}
               className={`w-full text-left px-3 py-2.5 rounded-lg text-xs font-mono transition-all flex items-center justify-between cursor-pointer ${selectedId === "all"
                   ? "bg-black dark:bg-white text-white dark:text-black font-semibold shadow-sm"
                   : "text-black/60 dark:text-white/50 hover:bg-black/5 dark:hover:bg-white/5"
@@ -582,7 +675,7 @@ export default function SkillsClient() {
 
             {/* vishalvoid — personal skills */}
             <button
-              onClick={() => setSelectedId("vishalvoid")}
+              onClick={() => selectProvider("vishalvoid")}
               className={`w-full text-left px-3 py-2 rounded-lg text-xs font-mono transition-all flex items-center justify-between cursor-pointer ${selectedId === "vishalvoid"
                   ? "bg-black dark:bg-white text-white dark:text-black font-semibold shadow-sm"
                   : "text-black/60 dark:text-white/50 hover:bg-black/5 dark:hover:bg-white/5"
@@ -603,7 +696,7 @@ export default function SkillsClient() {
               {displayedProviders.map((p) => (
                 <button
                   key={p.id}
-                  onClick={() => setSelectedId(p.id)}
+                  onClick={() => selectProvider(p.id)}
                   className={`w-full text-left px-3 py-2 rounded-lg text-xs font-mono transition-all flex items-center justify-between cursor-pointer ${selectedId === p.id
                       ? "bg-black dark:bg-white text-white dark:text-black font-semibold shadow-sm"
                       : "text-black/60 dark:text-white/50 hover:bg-black/5 dark:hover:bg-white/5"
@@ -656,20 +749,69 @@ export default function SkillsClient() {
 
       {/* Main Grid Content */}
       <div className="flex-1 flex flex-col gap-6 min-w-0 w-full">
-        {/* Active Filter Status, Count & Search Bar */}
-        <div className="flex flex-col gap-3 border-b border-black/5 dark:border-white/5 pb-4">
-          <div className="flex items-center justify-between">
-            <h2 className="text-xs font-mono font-semibold text-black/80 dark:text-white/90">
-              {activeProviderName}
-            </h2>
-            <p className="text-[11px] text-black/40 dark:text-white/40">
-              {filtered.length} of {TOTAL_SKILLS}
-              {query && ` matching "${query}"`}
-            </p>
+        {/* Header + Categories + Search */}
+        <div className="flex flex-col gap-4 border-b border-black/5 dark:border-white/5 pb-5">
+          {/* Title row */}
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex flex-col gap-1">
+              <h2 className="font-mono text-xl font-bold tracking-tight text-black dark:text-white leading-none">
+                {activeProviderName}
+              </h2>
+              <p className="font-mono text-[11px] text-black/38 dark:text-white/32 leading-snug">
+                {selectedId === "all"
+                  ? "every community-curated agent skill, in one place"
+                  : selectedId === "vishalvoid"
+                  ? "personal patterns, techniques & hard-won recipes"
+                  : `open-source skills from ${PROVIDER_LIST.find((p) => p.id === selectedId)?.repoPath ?? selectedId}`}
+              </p>
+            </div>
+            <div className="flex flex-col items-end gap-0.5 shrink-0 pt-0.5">
+              <span className="font-mono text-3xl font-bold text-black/90 dark:text-white/90 leading-none tabular-nums">
+                {filtered.length}
+              </span>
+              <span className="font-mono text-[10px] text-black/32 dark:text-white/28 leading-none">
+                {query ? `of ${TOTAL_SKILLS}` : "skills"}
+              </span>
+            </div>
           </div>
 
+          {/* Categories — above search */}
+          {availableCategories.length > 0 && (
+            <div className="flex items-center gap-1.5 overflow-x-auto pb-0.5 -mx-1 px-1 scrollbar-none">
+              <button
+                onClick={() => setSelectedCategory("all")}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono transition-all cursor-pointer whitespace-nowrap border ${
+                  selectedCategory === "all"
+                    ? "bg-black dark:bg-white text-white dark:text-black font-semibold border-transparent shadow-sm"
+                    : "bg-black/[0.03] dark:bg-white/[0.04] text-black/55 dark:text-white/45 border-black/6 dark:border-white/10 hover:bg-black/7 dark:hover:bg-white/8"
+                }`}
+              >
+                All
+                <span className={`tabular-nums text-[10px] font-medium ${selectedCategory === "all" ? "opacity-65" : "opacity-50"}`}>
+                  {Object.values(categoryCounts).reduce((a, b) => a + b, 0)}
+                </span>
+              </button>
+              {availableCategories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono transition-all cursor-pointer whitespace-nowrap border ${
+                    selectedCategory === cat
+                      ? "bg-black dark:bg-white text-white dark:text-black font-semibold border-transparent shadow-sm"
+                      : "bg-black/[0.03] dark:bg-white/[0.04] text-black/55 dark:text-white/45 border-black/6 dark:border-white/10 hover:bg-black/7 dark:hover:bg-white/8"
+                  }`}
+                >
+                  {cat}
+                  <span className={`tabular-nums text-[10px] font-medium ${selectedCategory === cat ? "opacity-65" : "opacity-50"}`}>
+                    {categoryCounts[cat] ?? 0}
+                  </span>
+                </button>
+              ))}
+            </div>
+          )}
+
+          {/* Search */}
           <div className="flex items-center gap-3 w-full">
-            {/* Search Input */}
             <div className="relative w-full">
               <svg
                 width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
@@ -689,11 +831,12 @@ export default function SkillsClient() {
               />
             </div>
 
-            {(selectedId !== "all" || query) && (
+            {(selectedId !== "all" || query || selectedCategory !== "all") && (
               <button
                 onClick={() => {
-                  setSelectedId("all");
+                  selectProvider("all");
                   setQuery("");
+                  setSelectedCategory("all");
                 }}
                 className="text-[10px] font-mono text-red-500 hover:text-red-600 dark:text-red-400 dark:hover:text-red-300 transition-colors flex items-center gap-1 cursor-pointer shrink-0"
               >
@@ -721,7 +864,7 @@ export default function SkillsClient() {
           <div className="flex flex-col w-full">
             {filtered.map((item, index) => (
               <Link
-                key={`${item.repoPath}-${item.skill.slug}`}
+                key={`${index}-${item.repoPath}-${item.skill.slug}`}
                 href={item.href}
                 className="group flex gap-4 py-4 border-b border-black/5 dark:border-white/5 last:border-none hover:bg-black/[0.06] dark:hover:bg-white/[0.08] px-4 rounded-xl -mx-4 transition-all duration-150 cursor-pointer w-full"
               >
@@ -740,9 +883,22 @@ export default function SkillsClient() {
                       {item.repoPath}
                     </span>
                   </div>
+                  
                   <h3 className="text-sm text-black/60 dark:text-white/50 leading-relaxed mt-1.5 w-full font-mono">
                     {item.skill.tagline}
                   </h3>
+
+                  <div className="flex items-center gap-2 mt-1.5 font-mono text-[10px] text-black/45 dark:text-white/40">
+                    {item.kind === "external" && item.skill.difficulty && (
+                      <>
+                        <span>{item.skill.difficulty}</span>
+                        {item.skill.category && <span>•</span>}
+                      </>
+                    )}
+                    {item.skill.category && (
+                      <span>{item.skill.category}</span>
+                    )}
+                  </div>
                 </div>
               </Link>
             ))}

@@ -22,7 +22,7 @@ export default function HomePage() {
       <main className="flex-1 w-full flex flex-col">
 
         {/* ── Hero ───────────────────────────────────────────────── */}
-        <section className="max-w-[1200px] mx-auto w-full px-6 pt-[72px] pb-16">
+        <section className="max-w-[1200px] mx-auto w-full px-6 pt-[72px] pb-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-start">
 
             {/* Left */}
@@ -72,7 +72,7 @@ export default function HomePage() {
             </div>
 
             {/* Right — AI summit terminal */}
-            <div className="h-[420px] lg:h-[500px]">
+            <div className="h-[400px] lg:h-[440px]">
               <AITerminal />
             </div>
           </div>

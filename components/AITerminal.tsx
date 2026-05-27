@@ -178,7 +178,7 @@ export default function AITerminal() {
   const sepBord  = isDark ? "border-white/6"   : "border-black/6";
 
   return (
-    <div className={`relative w-full h-full min-h-[400px] rounded-xl border ${bord} ${bg} overflow-hidden flex flex-col font-mono text-xs shadow-lg`}>
+    <div className={`relative w-full h-full min-h-[400px] rounded-xl border ${bord} ${bg} overflow-hidden flex flex-col font-mono text-xs shadow-[0_2px_20px_-2px_rgba(0,0,0,0.1),0_1px_6px_-1px_rgba(0,0,0,0.06)]`}>
 
       {/* Chrome */}
       <div className={`flex items-center gap-1.5 px-4 py-3 border-b ${chrom} shrink-0`}>
